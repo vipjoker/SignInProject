@@ -1,8 +1,14 @@
 
 plugins {
-
-    id 'application'
+    id 'java'
+    id 'org.springframework.boot' version '3.2.2'
 }
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
 
 repositories {
    
@@ -13,104 +19,13 @@ dependencies {
    
     testImplementation "junit:junit:4.13.2"
     implementation "com.google.guava:guava:32.1.2-jre"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-test"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    implementation "org.springframework.boot:spring-boot-devtools"
+    implementation "org.hsqldb:hsqldb"
+    	
 // https://javatodev.com/spring-boot-jwt-authentication/?utm_content=cmp-true
 
 }
 
-// Apply a specific Java toolchain to ease working on different environments.
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
-    }
-}
-
-application {
-    // Define the main class for the application.
-    mainClass = 'signinproject.App'
-}
-
-
-// <?xml version="1.0" encoding="UTF-8"?>
-// <project xmlns="http://maven.apache.org/POM/4.0.0"
-// 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-// 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-// 	<modelVersion>4.0.0</modelVersion>
-// 	<parent>
-// 		<groupId>org.springframework.boot</groupId>
-// 		<artifactId>spring-boot-starter-parent</artifactId>
-// 		<version>3.2.1</version>
-// 		<relativePath /> <!-- lookup parent from repository -->
-// 	</parent>
-// 	<groupId>com.example</groupId>
-// 	<artifactId>rest-service-complete</artifactId>
-// 	<version>0.0.1-SNAPSHOT</version>
-// 	<name>rest-service-complete</name>
-// 	<description>Demo project for Spring Boot</description>
-// 	<properties>
-// 		<java.version>11</java.version>
-
-
-// 		<maven.compiler.source>11</maven.compiler.source>
-// 		<maven.compiler.target>11</maven.compiler.target>
-// 	</properties>
-// 	<dependencies>
-// 		<dependency>
-// 			<groupId>org.springframework.boot</groupId>
-// 			<artifactId>spring-boot-starter-web</artifactId>
-// 		</dependency>
-
-// 		<dependency>
-// 			<groupId>org.springframework.boot</groupId>
-// 			<artifactId>spring-boot-starter-test</artifactId>
-// 			<scope>test</scope>
-// 		</dependency>
-
-// 		<dependency>
-// 			<groupId>org.springframework.boot</groupId>
-// 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-// 		</dependency>
-
-// 		<dependency>
-// 			<groupId>org.hsqldb</groupId>
-// 			<artifactId>hsqldb</artifactId>
-// 		</dependency>
-
-// 		<dependency>
-// 			<groupId>org.springframework.boot</groupId>
-// 			<artifactId>spring-boot-devtools</artifactId>
-// 			<optional>true</optional>
-// 		</dependency>
-// 	</dependencies>
-
-
-// 	<build>
-// 		<plugins>
-
-// 			<plugin>
-// 				<artifactId>maven-compiler-plugin</artifactId>
-// 				<configuration>
-// 					<source>11</source>
-// 					<target>11</target>
-// 					<release>11</release>
-// 				</configuration>
-// 			</plugin>
-
-// 			<plugin>
-// 				<groupId>org.springframework.boot</groupId>
-// 				<artifactId>spring-boot-maven-plugin</artifactId>
-// 			</plugin>
-
-
-// 		</plugins>
-// 	</build>
-// 	<pluginRepositories>
-// 		<pluginRepository>
-// 			<id>spring-snapshots</id>
-// 			<url>https://repo.spring.io/snapshot</url>
-// 		</pluginRepository>
-// 		<pluginRepository>
-// 			<id>spring-milestones</id>
-// 			<url>https://repo.spring.io/milestone</url>
-// 		</pluginRepository>
-// 	</pluginRepositories>
-// </project>
