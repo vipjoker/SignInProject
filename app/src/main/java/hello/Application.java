@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 public class Application {
 	public static void main(String[] args) {
 		System.out.println("Hello work");
-
+//		https://javatodev.com/spring-boot-jwt-authentication/?utm_content=cmp-true
 		SpringApplication.run(Application.class, args);
 
 	}
