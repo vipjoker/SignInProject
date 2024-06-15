@@ -21,13 +21,6 @@ public class Application {
 	@Bean
 	CommandLineRunner runner (PersonRepository repository){
 		return args -> {
-
-
-
-
-
-			
-
 			for (Person p : Arrays.asList(
 				Person.create("Afghanistan",	"Kabul"),
 				Person.create("Albania",	"Tirana"),
