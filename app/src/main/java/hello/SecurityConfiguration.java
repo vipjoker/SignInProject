@@ -25,12 +25,10 @@ public class SecurityConfiguration {
     private final BCryptPasswordEncoder passwordEncoder;
     private final AuthenticationUserDetailService authenticationUserDetailService;
 
-    @Autowired
-    JWTAuthenticationFilter authFilter;
 
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, JWTAuthenticationFilter authFilter) throws Exception {
         http
                 .csrf(csrf -> csrf.disable()) // Disable CSRF for stateless APIs
                 .authorizeHttpRequests(auth -> auth

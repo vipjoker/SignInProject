@@ -20,10 +20,7 @@ public class Application {
 
 	}
 
-	@Bean
-	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-		return config.getAuthenticationManager();
-	}
+
 
 	@Bean
 	CommandLineRunner runner (PersonRepository repository){
@@ -56,9 +53,9 @@ public class Application {
 				Person.create("Brazil",	"Brasilia"),
 				Person.create("Brunei",	"Bandar Seri Begawan"),
 				Person.create("Bulgaria",	"Sofia"),
-				Person.create("Burkina Faso", "Ouagadougou"),	
+				Person.create("Burkina Faso", "Ouagadougou"),
 				Person.create("Burundi",	"Gitega"),
-				Person.create("Cabo Verde" , "Praia"),	
+				Person.create("Cabo Verde" , "Praia"),
 				Person.create("Cambodia",	"Phnom Penh"),
 				Person.create("Cameroon",	"Yaounde"),
 				Person.create("Canada",	"Ottawa"),
@@ -228,7 +225,7 @@ public class Application {
 				Person.create("Zambia",	"Lusaka"),
 				Person.create("Zimbabwe",	"Harare")
 			)){
-			
+
 				repository.save(p);
 			}
 		};
