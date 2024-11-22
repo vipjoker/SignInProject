@@ -4,7 +4,7 @@ package hello.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "api_user")
 public class ApiUser {
 
     @Id

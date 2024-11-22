@@ -1,9 +1,7 @@
 package hello;
 
-import java.util.Optional;
-
+import hello.entity.Person;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
 
 public interface PersonRepository extends CrudRepository<Person, Long>{
    

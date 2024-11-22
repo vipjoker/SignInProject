@@ -1,4 +1,4 @@
-package hello;
+package hello.auth;
 
 public class AuthenticationConfigConstants {
     public static final String SECRET = "Java_to_Dev_Secret";

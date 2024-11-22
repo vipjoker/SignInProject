@@ -1,4 +1,4 @@
-package hello;
+package hello.auth;
 
 import hello.entity.ApiUser;
 import hello.service.UserService;

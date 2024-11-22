@@ -1,4 +1,4 @@
-package hello;
+package hello.controller;
 
 import hello.model.UserCreateRequest;
 import hello.service.UserService;
@@ -17,9 +17,9 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity createUser (@RequestBody UserCreateRequest userCreateRequest) {
+    public ResponseEntity<UserCreateRequest> createUser (@RequestBody UserCreateRequest userCreateRequest) {
         userService.createUser(userCreateRequest);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(userCreateRequest);
     }
 
 

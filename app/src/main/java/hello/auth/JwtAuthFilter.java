@@ -1,6 +1,9 @@
-package hello;
+package hello.auth;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import hello.auth.AuthenticationConfigConstants;
+import hello.auth.AuthenticationUserDetailService;
+import hello.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
