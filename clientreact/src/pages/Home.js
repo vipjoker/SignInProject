@@ -11,7 +11,7 @@ export default function Home() {
     },[])
 
     const loadUsers = async ()=>{
-        const result = await axios.get('http://localhost:8080/countries')
+        const result = await axios.get('http://localhost:8080/api/user')
         setUsers(result.data);
     }
 
@@ -35,8 +35,8 @@ export default function Home() {
 
          <tr>
         <th scope="row" key={index}>{index + 1}</th>
-        <td>{user.country}</td>
-        <td>{user.capital}</td>
+        <td>{user.id}</td>
+        <td>{user.username}</td>
 
         <td>
             <button className='btn btn-primary mx-2'>View</button>

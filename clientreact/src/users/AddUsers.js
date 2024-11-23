@@ -7,12 +7,11 @@ export default function AddUsers() {
     let navigate = useNavigate()
 
     const [user,setUser] =useState({
-        name:"",
         username:"",
-        email:""
+        password:""
     })
     
-    const {name, username, email} = user
+    const { username, password} = user
 
     const onInputChange = (e)=>{
         setUser({...user,[e.target.name] : e.target.value})
@@ -20,7 +19,7 @@ export default function AddUsers() {
 
     const onSubmit = async (e)=>{
         e.preventDefault();
-        await axios.post("http://localhost:8080/countries", user)
+        await axios.post("http://localhost:8080//api/user", user)
         navigate("/")
     }
 
@@ -34,19 +33,7 @@ export default function AddUsers() {
             <form onSubmit={(e)=>onSubmit(e)}>
             <div className='mb-3'>
 
-                <label htmlFor='Name' className='form-label'>
-                    Name
-                </label>
-                <input type={"text"} className='form-control' 
-                placeholder='Enter your name'
-                name="name"
-                value={name}
-                onChange={(e)=>{onInputChange(e)}}
-                />
-            </div>
-            <div className='mb-3'>
-
-                <label htmlFor='Name' className='form-label'>
+                <label htmlFor='Username' className='form-label'>
                     Username
                 </label>
                 <input type={"text"} className='form-control' 
@@ -58,16 +45,17 @@ export default function AddUsers() {
             </div>
             <div className='mb-3'>
 
-                <label htmlFor='Name' className='form-label'>
-                    E-mail
+                <label htmlFor='Password' className='form-label'>
+                    Password
                 </label>
                 <input type={"text"} className='form-control' 
-                placeholder='Enter your e-mail address'
-                name="email"
-                value={email}
+                placeholder='Enter your password'
+                name="password"
+                value={password}
                 onChange={(e)=>{onInputChange(e)}}
                 />
             </div>
+          
 
            
             <button type='submit' className='btn btn-outline-primary'>Submit</button>
@@ -79,3 +67,4 @@ export default function AddUsers() {
     </div>
   )
 }
+
